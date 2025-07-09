@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    align-items: flex-start; /* aligns top edges */
+    gap: 20px; /* space between container and pokemon-card */
+}
+
+.container {
+    width: 250px;
+    height: 125px;
+    float: left;
+    margin-right: 10px;
+}
+
+pokemon-card {
+    width: 250px;
+    height: 250px;
+    float: left;
+}
