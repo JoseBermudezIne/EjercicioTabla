@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+<main class="container">
+    <div style="margin: 10px;">
+        <button id="toggle-fav-btn">Ver Favoritos 💛</button>
+    </div>
+    <section id="pokemon-list" class="list"></section>
+    <div id="pagination-controls" style="margin:10px; display:flex; gap:10px;">
+        <button id="prev-page">⬅️ Anterior</button>
+        <span id="page-indicator"></span>
+        <button id="next-page">Siguiente ➡️</button>
+    </div>
+    <section id="pokemon-detail" class="detail"></section>
+</main>
+<template id="pokemon-card-template">
+    <div class="card">
+        <h2 class="name"></h2>
+        <div class="images">
+            <img class="front" />
+            <img class="back" />
+            <img class="shiny" />
+        </div>
+        <p><strong>Base Exp:</strong> <span class="exp"></span></p>
+        <p><strong>Height:</strong> <span class="height"></span></p>
+        <p><strong>Types:</strong> <span class="types"></span></p>
+    </div>
+</template>
+</div>
+
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

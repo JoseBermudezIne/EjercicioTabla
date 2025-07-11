@@ -1,0 +1,74 @@
+body{
+    background-color: #89dbfa;
+}
+h1{
+    font-family: 'consolas', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    border-top-style: dashed;
+    border-bottom-style: dashed;
+    text-shadow:0px 0px 10px chocolate;
+}
+h1:hover{
+    box-shadow: 5px 5px 5px chartreuse;
+}
+.pp1{
+    border-style: solid;
+    border-width: 3px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    border-color: #ef0b0b;
+    padding: 10px;
+}
+#box2{
+    background-image: url("Imafen Fondo Meetings.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.box{
+    width: 250px;
+    height: 125px;
+    color: purple;
+    border: 20px solid;
+    float: right;
+}
+h2{
+    background: linear-gradient(to right,red,green);
+    color: white;
+    background-attachment: fixed;
+}
+.pp3{
+    background: linear-gradient(to left,red,green);
+    color: white;
+    background-attachment: fixed;
+
+}
+a{
+   font-size: 50px;
+}
+a:hover{
+    color: darkred;
+}
+a:link{
+    color:lawngreen;
+}
+a:active{
+    color: yellow;
+}
+button:hover{
+    background-color: darkred;
+}
+img{
+    width: 200px;
+    height: 200px;
+    animation: 2s linear 1s infinite running myAnimation;
+}
+@keyframes myAnimation {
+    from{ margin-left: 100%;}
+    to   { margin-left: 0%;}
+}

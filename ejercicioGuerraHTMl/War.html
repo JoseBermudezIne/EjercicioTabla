@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EjercicioGuerra</title>
+</head>
+<body>
+<div id="forms">
+    <h3>Formulario de definición de vida y el poder del submarino</h3>
+    <form id="datosSub">
+        <label>Vida Submarino:</label>
+        <input type="number" id="vidaSubma" required>
+        <label>Daño Submarino:</label>
+        <input type="number" id="damageSub" required>
+
+        <button type="button" id="btnGuardarSub">Guardar Submarino</button>
+    </form>
+</div>
+
+<div id="unidadConfig">
+    <h3>Formulario de definición de cálculo de vida</h3>
+    <form id="vidaForm">
+        <div>
+            <label>Regular Soldiers - Parte Vida:</label>
+            <input type="number" id="regularParte" name="regularParte">
+            <label>Dividir entre:</label>
+            <input type="number" id="regularDivi" required>
+        </div>
+
+        <div>
+            <label>Profesional Soldiers - Parte Vida:</label>
+            <input type="number" id="profParte" required>
+            <label>Dividir entre:</label>
+            <input type="number" id="profDivi" required>
+        </div>
+
+        <div>
+            <label>Elite Soldiers - Parte Vida:</label>
+            <input type="number" id="eliteParte" required>
+            <label>Dividir entre:</label>
+            <input type="number" id="eliteDivi" required>
+        </div>
+
+        <div>
+            <label>Carro Tanque - Parte Vida:</label>
+            <input type="number" id="carroParte" required>
+            <label>Dividir entre:</label>
+            <input type="number" id="carroDivi" required>
+        </div>
+
+        <div>
+            <label>Helicóptero - Parte Vida:</label>
+            <input type="number" id="heliParte" required>
+            <label>Dividir entre:</label>
+            <input type="number" id="heliDivi" required>
+        </div>
+
+        <div>
+            <label>Avión de Combate - Parte Vida:</label>
+            <input type="number" id="avionParte" required>
+            <label>Dividir entre:</label>
+            <input type="number" id="avionDivi" required>
+        </div>
+        <button type="button" id="btnGuardarVidas">Guardar Vidas</button>
+
+    </form>
+</div>
+
+<div id="roundHistory"></div>
+<div id="statistics"></div>
+
+
+<script src="Guerra.js"></script>
+</body>
+</html>
