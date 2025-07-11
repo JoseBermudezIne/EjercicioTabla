@@ -11,8 +11,14 @@ class DemoPolymerApp extends PolymerElement {
         :host {
           display: block;
         }
+        h1{
+          text-align: center;
+        }
+        task-show-list{
+          text-align: center;
+        }
       </style>
-      <h2>Hello [[prop1]]!</h2>
+      <h1><strong>[[prop1]]!</strong></h1>
       <task-show-list></task-show-list>
     `;
   }
@@ -20,7 +26,7 @@ class DemoPolymerApp extends PolymerElement {
     return {
       prop1: {
         type: String,
-        value: 'demo-polymer-app'
+        value: 'Gestor de Tareas'
       }
     };
   }

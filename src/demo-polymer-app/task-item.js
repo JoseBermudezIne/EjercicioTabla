@@ -17,10 +17,7 @@ class TaskItem extends PolymerElement {
     }
     static get properties() {
         return {
-            descriptivme: {
-                type: Array,
-                value: []
-            }
+
         };
     }
     addInfoToTaskList(e) {

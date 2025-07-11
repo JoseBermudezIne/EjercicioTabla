@@ -1,5 +1,6 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import './task-item'
+import {} from '@polymer/polymer/lib/elements/dom-repeat.js';
 /**
  * @customElement
  * @polymer
@@ -11,17 +12,43 @@ class TaskList extends PolymerElement {
                 :host {
                     display: block;
                 }
+
+                #deleteButtom {
+                    background-color: coral;
+                }
+
+                #deleteButtom:hover {
+                    box-shadow: 5px 5px 5px #8e0012;
+                }
+
+                div {
+                    border: 1px solid mediumblue;
+                    width: 50%;
+                }
+
+                #completeButtom:hover {
+                    box-shadow: 5px 5px 5px chartreuse;
+                }
+                h2{
+                    text-align: center;
+                    border-top-style: solid;
+                    border-bottom-style: dashed;
+                }
+                task-item{
+                    text-align: center;
+                }
             </style>
 
-            <h2>Hello [[prop1]]!</h2>
+            <h2>Lista de tasks</h2>
 
             <task-item on-click-info="addInfoToTaskList"></task-item>
 
             <template is="dom-repeat" items="[[task]]" as="t" index-as="i">
                 <div>
                     <span>[[t.idListaDeTask]]</span>
-                    <button on-click="deleteTask" data-index$="[[i]]">Delete Task</button>
-                    <button on-click="toggleCompleted" data-index$="[[i]]">
+                    <button on-click="deleteTask" data-index$="[[i]]" id="deleteButtom">Delete Task</button>
+                    <button on-click="toggleCompleted" data-index$="[[i]]" disabled$="[[t.completedTask]]"
+                            id="completeButtom">
                         [[_getIcon(t.completedTask)]]
                     </button>
                 </div>
@@ -84,8 +111,11 @@ class TaskList extends PolymerElement {
             this.saveTasks();
         }
     }
+    _getIcon(completedTask) {
+        return completedTask ? 'Completado' : 'No completado';
+    }
     llamarEvento(parametro,viejo) {
-        console.log('Observer fired with:', parametro);
+        console.log('Observer triggered with:', parametro);
         this.dispatchEvent(new CustomEvent('click-mostar', {
             detail: parametro,
             bubbles: true,

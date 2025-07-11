@@ -9,7 +9,11 @@ class TaskShowList extends PolymerElement {
         return html`
             <style> :host {
                 display: block;
-            } </style>
+            }
+            task-list{
+                text-align: center;
+            }
+            </style>
             <task-list on-click-mostar="addInfoToTaskList"></task-list>
         `;
     }
@@ -23,34 +27,7 @@ class TaskShowList extends PolymerElement {
         };
     }
     addInfoToTaskList(event) {
-        const tasks = event.detail;
-        const ul = document.createElement('ul');
 
-        tasks.forEach((t, idx) => {
-            const li = document.createElement('li');
-            li.textContent = t.idListaDeTask;
-
-            const delBtn = document.createElement('button');
-            delBtn.textContent = 'Delete';
-            delBtn.addEventListener('click', () => {
-                this.dispatchEvent(new CustomEvent('delete-task', t));
-            });
-
-            const toggleBtn = document.createElement('button');
-            toggleBtn.textContent = t.completedTask ? '⬛' : '◻️';
-            toggleBtn.addEventListener('click', () => {
-                this.dispatchEvent(new CustomEvent('toggle-task', t));
-            });
-
-            li.append(delBtn, toggleBtn);
-            ul.appendChild(li);
-        });
-
-        // clear any old list, then append
-        const old = document.querySelector('ul.task-list');
-        if (old) old.remove();
-        ul.classList.add('task-list');
-        document.body.appendChild(ul);
     }
 
 
